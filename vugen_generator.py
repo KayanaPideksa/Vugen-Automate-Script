@@ -227,7 +227,7 @@ with left_col:
         with col3:
             sc_name = st.text_input("Screen Name", placeholder="e.g. Login", key=f"sname_{s}_{rc}")
 
-        num_apis = st.number_input("How many APIs?", min_value=1, max_value=20, value=1, step=1, key=f"napi_{s}_{rc}")
+        num_apis = st.number_input("How many APIs?", min_value=1, max_value=99, value=1, step=1, key=f"napi_{s}_{rc}")
 
         apis = []
         for i in range(int(num_apis)):
