@@ -184,10 +184,10 @@ def generate_vugen_script(bp_number: int, screen_number: int, screen_name: str, 
         lines.append(f'    LAST);')
         lines.append("")
         lines.append(f'  Validation_Response();')
-        lines.append(f'  lr_end_sub_transaction(lr_eval_string("{{subTransaction}}"));')
+        lines.append(f'  lr_end_sub_transaction(lr_eval_string("{{subTransaction}}"), LR_AUTO);')
         lines.append("")
 
-    lines.append(f'  lr_end_transaction(lr_eval_string("{{stepTransaction}}"));')
+    lines.append(f'  lr_end_transaction(lr_eval_string("{{stepTransaction}}"), LR_AUTO);')
     lines.append("")
     lines.append("  return 0;")
     lines.append("}")
